@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_70D9A130-8372-4C36-9A18-54648A832AEA" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_DF75E35F-9F37-4BD2-ABD4-503A95B1EA8A" name="drawndealmatch" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_70D9A130-8372-4C36-9A18-54648A832AEA">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_124701B1-C400-41B2-967C-D559E4353349" name="Drawn Deal" isCollection="false">
+    <dmn:itemComponent id="_0AFA0D9F-2A6B-414C-9103-DA267391F488" name="booked_deal_id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_033F51ED-E655-4C93-83AB-0AD972D7C96C" name="buid" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E3F18DE3-8AC0-4304-9274-F5EADF3DDA69" name="rel number" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C4FF0F08-5A4A-4BEB-AF68-8699F46309DC" name="rel name" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B632590F-7A66-4E3C-B5DD-E8FF266B0086" name="cust id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4394D67E-B667-49E0-A7C4-4AA2410E25D7" name="crs" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_51FB3F15-CAE9-46DE-A5F2-FC6773738F16" name="anzsic code" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D45C34C2-3BA4-4E19-9761-084D667EFD88" name="account id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E71855D8-BC8B-48BE-A5C3-A4417A8BCD33" name="product type" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_069BB08E-F1EB-4266-B83B-1F01D74F6499" name="product variant" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D8B24C5D-0F8F-4F47-8494-8031C32C88D3" name="lcc" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C31F2B7C-9987-4F58-B2EC-826546468ADE" name="fac limit sought" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1227688A-90D8-4827-AFDD-5970D1F90CD6" name="term month" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_841808F1-5EF4-47ED-9028-8E98EF330182" name="sought tot drawn margin" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A6E6E626-5AAF-40CF-8305-5667390B29BD" name="sought tot undrawn margin" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AA8E59E6-E458-4C85-8F6B-B5074D66C051" name="sought service fee per freq" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_F2F236EF-1A3B-490D-87EC-F1B0E9806776" name="Consolidated Quote DB" isCollection="false">
+    <dmn:itemComponent id="_7C1DDADF-6677-4CBA-B90A-6136D93F4B4D" name="dp ds match id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3392B580-D0B0-48C6-8070-8A0300EB40D4" name="buid" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1A41482A-48F3-4E78-B2C5-5D4E375D8B4C" name="rel number" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_09533219-62A4-4F32-A9FC-FEC76DAFEFDD" name="rel name" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_83EDD578-849A-4EDF-A1A2-794BC5DF4E67" name="cust id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_41090F34-91CB-4A78-B7D5-547378D20342" name="crs" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_2FA698F9-4B78-4C4F-974F-93C8CC1D0142" name="anzsic code" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0E7C3865-4179-46D4-AE6A-3C1BC2A6A69A" name="account id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1DFB8E4A-ABE0-46A3-98D8-93BA640CC186" name="product type" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_EFF63D89-E7BB-405F-8B06-1A3BA3E8F85B" name="product variant" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C821992A-033C-467C-B33C-80721A3F5628" name="lcc" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E2030807-4694-42CE-BF28-ACA39C41DC70" name="fac limit sought" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_04B5188F-56E9-4130-83EE-9D3C703444AF" name="term month" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_71F472BC-F656-4187-ABBE-03277F955D6D" name="sought tot drawn margin" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9E272DE9-59D2-40E6-AD75-D3FB7B72EF6D" name="sought service fee per freq" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_96F9C613-66FE-4FA5-9CDB-3E0E6E3D6518" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension/>
+      </di:extension>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_D3AD389F-A7AC-423F-BC9D-5AD0C43DE0F4" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_D12B8B0C-D63B-4E21-9645-4C9730F79625" name="Untitled" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_D3AD389F-A7AC-423F-BC9D-5AD0C43DE0F4">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_D318552E-0CE9-4428-849B-DAA505566155" name="DealPoint Quote" isCollection="false">
+    <dmn:itemComponent id="_1F93B128-8D54-4A73-8504-F53D4FB9BF00" name="ROE_QUOTE_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C7FD40BC-1748-44A1-AA71-3135625A83A5" name="DEAL_MODIFIED_DATE" isCollection="false">
+      <dmn:typeRef>date</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_380D5281-3502-4AD5-924B-7F6529B6C364" name="BANKERS_BUID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_94446EA8-AF70-4392-ABD2-D2E11A161215" name="GROUP_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D366DE1D-2DE6-40E5-8617-9120D368A219" name="CUSTOMER_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8CEA452B-973F-4047-81B2-C8C3D0964A38" name="PRODUCT_ACCOUNT_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8DFAC8AF-1EF2-4C0F-86C7-AC21B796F680" name="PRODUCT_VARIANT_CODE" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_2CA5EC43-BB2E-4445-9950-28BEF3CC1052" name="DealStart Quote" isCollection="false">
+    <dmn:itemComponent id="_EA59C7F2-3781-44F5-855E-733B4762646C" name="TPP_QUOTE_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B8CEBAAC-8C6A-4B59-9DD5-C67FED7E37E7" name="DATE_MODIFIED" isCollection="false">
+      <dmn:typeRef>date</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_11703150-3016-494C-920A-9C903EBE7217" name="BUID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9886C0F1-851E-40B9-A4D8-5E71FB3A4D66" name="REL_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_30246481-768A-4A67-9DD6-602663348066" name="CUST_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_99CE00BF-CDC3-4B69-BDD2-B3757F5843D7" name="ACCOUNT_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_DBF07738-03D5-4EDE-B953-D4129CB00222" name="PRODUCT_TYPE" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+      <dmn:allowedValues kie:constraintType="enumeration" id="_F20C90AB-C8E3-4102-B228-9A4B24F20A92">
+        <dmn:text>"loan-corporateMarket", "loan-businessMarket", "loan-marketRate", "loan-businessOptions", "loan-overdraft", "loan-bankGuarantee"</dmn:text>
+      </dmn:allowedValues>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_E2821FD0-AD1A-4778-B69A-2B90B30349A9" name="DealPoint Quote">
+    <dmn:extensionElements/>
+    <dmn:variable id="_E8A66B87-1FAC-482A-9DD2-23A370657B9E" name="DealPoint Quote" typeRef="DealPoint Quote"/>
+  </dmn:inputData>
+  <dmn:inputData id="_70D95991-78A9-4421-8775-24C75547B728" name="DealStart Quote">
+    <dmn:extensionElements/>
+    <dmn:variable id="_1AE329A7-B135-49A7-AD4D-89458B5D2350" name="DealStart Quote" typeRef="DealStart Quote"/>
+  </dmn:inputData>
+  <dmn:decision id="_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" name="Quote Match Rule">
+    <dmn:extensionElements/>
+    <dmn:variable id="_18E285C2-56F2-4458-898F-6F69F4BEA696" name="Quote Match Rule" typeRef="date"/>
+    <dmn:informationRequirement id="_E6C29737-4C5F-421C-B1B2-EDF503F83265">
+      <dmn:requiredInput href="#_E2821FD0-AD1A-4778-B69A-2B90B30349A9"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_AE00B849-E12A-4367-B8A8-23A95D1D1132">
+      <dmn:requiredInput href="#_70D95991-78A9-4421-8775-24C75547B728"/>
+    </dmn:informationRequirement>
+    <dmn:context id="_1DFF6A27-F31E-43CB-A054-6FBACA6C36A3">
+      <dmn:contextEntry>
+        <dmn:variable id="_BDF24910-DDF9-4417-85F1-E99901AB3096" name="Valid Dates" typeRef="date"/>
+        <dmn:literalExpression id="_5A000685-2186-4EAF-B728-9789FA8E2D32">
+          <dmn:text>true</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_D55DAC17-D4DA-4201-A874-C65FC5E3E149">
+          <dmn:text>return DealPoint Quote</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmn:decision id="_B78CD0E0-853B-435E-A02A-9506C7C6872B" name="Date Validation">
+    <dmn:extensionElements/>
+    <dmn:variable id="_D31F607F-FB20-4343-91BD-4A837F6D32D7" name="Date Validation" typeRef="Any"/>
+    <dmn:informationRequirement id="_B76CD138-B33F-49CE-901E-2D3ED4EA21C3">
+      <dmn:requiredInput href="#_70D95991-78A9-4421-8775-24C75547B728"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_FE9E3CB4-E299-4390-BDE6-4EA8B8411E5D">
+      <dmn:requiredInput href="#_E2821FD0-AD1A-4778-B69A-2B90B30349A9"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_88ED7DCF-5E0C-4CE3-90A1-BA202509665A">
+      <dmn:text>
+(DealPoint Quote.DEAL_MODIFIED_DATE - duration("P3M")) &lt;= DealStart Quote.DATE_MODIFIED and DealPoint Quote.DEAL_MODIFIED_DATE &gt;= DealStart Quote.DATE_MODIFIED</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_016CA363-92C1-4A82-B3B7-14D4B9C2BA36" name="Decision-1">
+    <dmn:extensionElements/>
+    <dmn:variable id="_C32ED7AE-543B-4643-B6FC-10FA854DAC3B" name="Decision-1"/>
+    <dmn:informationRequirement id="_6D62C173-04E8-462A-B330-F23EE8F83EE1">
+      <dmn:requiredInput href="#_E2821FD0-AD1A-4778-B69A-2B90B30349A9"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_8F2201F5-9EA8-45E7-AF89-D94B984A2168">
+      <dmn:requiredInput href="#_70D95991-78A9-4421-8775-24C75547B728"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_E16DE05A-E7A8-47C3-B1CD-211F7B6989FC">
+      <dmn:text>
+(DealPoint Quote.DEAL_MODIFIED_DATE - DealStart Quote.DATE_MODIFIED) &lt;= duration("P3M")
+</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_202D853E-DF93-42E0-9688-5938414B79FD" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_1DFF6A27-F31E-43CB-A054-6FBACA6C36A3">
+            <kie:width>50</kie:width>
+            <kie:width>120</kie:width>
+            <kie:width>793</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5A000685-2186-4EAF-B728-9789FA8E2D32">
+            <kie:width>793</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D55DAC17-D4DA-4201-A874-C65FC5E3E149">
+            <kie:width>793</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_88ED7DCF-5E0C-4CE3-90A1-BA202509665A">
+            <kie:width>1062</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_E16DE05A-E7A8-47C3-B1CD-211F7B6989FC">
+            <kie:width>755</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_E2821FD0-AD1A-4778-B69A-2B90B30349A9" dmnElementRef="_E2821FD0-AD1A-4778-B69A-2B90B30349A9" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="190" y="406" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_70D95991-78A9-4421-8775-24C75547B728" dmnElementRef="_70D95991-78A9-4421-8775-24C75547B728" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="448" y="412" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" dmnElementRef="_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="304" y="43" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_B78CD0E0-853B-435E-A02A-9506C7C6872B" dmnElementRef="_B78CD0E0-853B-435E-A02A-9506C7C6872B" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="312" y="307" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_016CA363-92C1-4A82-B3B7-14D4B9C2BA36" dmnElementRef="_016CA363-92C1-4A82-B3B7-14D4B9C2BA36" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="324" y="405.86046951315643" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_E6C29737-4C5F-421C-B1B2-EDF503F83265" dmnElementRef="_E6C29737-4C5F-421C-B1B2-EDF503F83265">
+        <di:waypoint x="240" y="431"/>
+        <di:waypoint x="354" y="68"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_AE00B849-E12A-4367-B8A8-23A95D1D1132" dmnElementRef="_AE00B849-E12A-4367-B8A8-23A95D1D1132">
+        <di:waypoint x="498" y="437"/>
+        <di:waypoint x="354" y="68"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_B76CD138-B33F-49CE-901E-2D3ED4EA21C3" dmnElementRef="_B76CD138-B33F-49CE-901E-2D3ED4EA21C3">
+        <di:waypoint x="498" y="437"/>
+        <di:waypoint x="362" y="332"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_FE9E3CB4-E299-4390-BDE6-4EA8B8411E5D" dmnElementRef="_FE9E3CB4-E299-4390-BDE6-4EA8B8411E5D">
+        <di:waypoint x="240" y="431"/>
+        <di:waypoint x="362" y="332"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_6D62C173-04E8-462A-B330-F23EE8F83EE1-AUTO-TARGET" dmnElementRef="_6D62C173-04E8-462A-B330-F23EE8F83EE1">
+        <di:waypoint x="240" y="431"/>
+        <di:waypoint x="374" y="405.86046951315643"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_8F2201F5-9EA8-45E7-AF89-D94B984A2168" dmnElementRef="_8F2201F5-9EA8-45E7-AF89-D94B984A2168">
+        <di:waypoint x="498" y="437"/>
+        <di:waypoint x="374" y="430.86046951315643"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
