@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dmn:definitions xmlns:dmn="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns="https://kiegroup.org/dmn/_D3AD389F-A7AC-423F-BC9D-5AD0C43DE0F4" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="https://kie.org/dmn/extensions/1.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_D12B8B0C-D63B-4E21-9645-4C9730F79625" name="Untitled" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kiegroup.org/dmn/_D3AD389F-A7AC-423F-BC9D-5AD0C43DE0F4">
+  <dmn:extensionElements />
+  <dmn:itemDefinition id="_D318552E-0CE9-4428-849B-DAA505566155" name="DealPoint Quote" isCollection="false">
+    <dmn:itemComponent id="_1F93B128-8D54-4A73-8504-F53D4FB9BF00" name="ROE_QUOTE_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C7FD40BC-1748-44A1-AA71-3135625A83A5" name="DEAL_MODIFIED_DATE" isCollection="false">
+      <dmn:typeRef>date</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_380D5281-3502-4AD5-924B-7F6529B6C364" name="BANKERS_BUID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_94446EA8-AF70-4392-ABD2-D2E11A161215" name="GROUP_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D366DE1D-2DE6-40E5-8617-9120D368A219" name="CUSTOMER_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8CEA452B-973F-4047-81B2-C8C3D0964A38" name="PRODUCT_ACCOUNT_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8DFAC8AF-1EF2-4C0F-86C7-AC21B796F680" name="PRODUCT_VARIANT_CODE" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_2CA5EC43-BB2E-4445-9950-28BEF3CC1052" name="DealStart Quote" isCollection="false">
+    <dmn:itemComponent id="_EA59C7F2-3781-44F5-855E-733B4762646C" name="TPP_QUOTE_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B8CEBAAC-8C6A-4B59-9DD5-C67FED7E37E7" name="DATE_MODIFIED" isCollection="false">
+      <dmn:typeRef>date</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_11703150-3016-494C-920A-9C903EBE7217" name="BUID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9886C0F1-851E-40B9-A4D8-5E71FB3A4D66" name="REL_NUMBER" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_30246481-768A-4A67-9DD6-602663348066" name="CUST_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_99CE00BF-CDC3-4B69-BDD2-B3757F5843D7" name="ACCOUNT_ID" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_DBF07738-03D5-4EDE-B953-D4129CB00222" name="PRODUCT_TYPE" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+      <dmn:allowedValues kie:constraintType="enumeration" id="_F20C90AB-C8E3-4102-B228-9A4B24F20A92">
+        <dmn:text>&quot;loan-corporateMarket&quot;, &quot;loan-businessMarket&quot;, &quot;loan-marketRate&quot;, &quot;loan-businessOptions&quot;, &quot;loan-overdraft&quot;, &quot;loan-bankGuarantee&quot;</dmn:text>
+      </dmn:allowedValues>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_E2821FD0-AD1A-4778-B69A-2B90B30349A9" name="DealPoint Quote">
+    <dmn:extensionElements />
+    <dmn:variable id="_E8A66B87-1FAC-482A-9DD2-23A370657B9E" name="DealPoint Quote" typeRef="DealPoint Quote" />
+  </dmn:inputData>
+  <dmn:inputData id="_70D95991-78A9-4421-8775-24C75547B728" name="DealStart Quote">
+    <dmn:extensionElements />
+    <dmn:variable id="_1AE329A7-B135-49A7-AD4D-89458B5D2350" name="DealStart Quote" typeRef="DealStart Quote" />
+  </dmn:inputData>
+  <dmn:decision id="_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" name="Quote Match Rule">
+    <dmn:extensionElements />
+    <dmn:variable id="_18E285C2-56F2-4458-898F-6F69F4BEA696" name="Quote Match Rule" typeRef="Any" />
+    <dmn:informationRequirement id="_E6C29737-4C5F-421C-B1B2-EDF503F83265">
+      <dmn:requiredInput href="#_E2821FD0-AD1A-4778-B69A-2B90B30349A9" />
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_AE00B849-E12A-4367-B8A8-23A95D1D1132">
+      <dmn:requiredInput href="#_70D95991-78A9-4421-8775-24C75547B728" />
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_9441AA80-58C7-433F-8B80-E285FE711AF8" label="Quote Match Rule" typeRef="Any" hitPolicy="UNIQUE">
+      <dmn:input id="_8EB551BF-910E-4AA9-A5D7-F14BB010B55B">
+        <dmn:inputExpression id="_D5E8A094-99D9-444D-8CD8-5D0DAB597BCC" typeRef="number">
+          <dmn:text>DealPoint Quote.PRODUCT_VARIANT_CODE</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_51BCC3A9-884F-4F91-8A50-56B5622239E9">
+        <dmn:inputExpression id="_C9E6C66B-9713-45D9-AF38-D857463428CB" typeRef="string">
+          <dmn:text>DealStart Quote.PRODUCT_TYPE</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_E7A73482-B679-4FDB-85C3-DE4451B37AA7" name="Quote Match Rule" typeRef="&lt;Undefined&gt;" />
+      <dmn:output id="_B2590474-68C3-4F0F-A8E7-3B50823E6796" name="TPP_Quote_ID" typeRef="DealPoint Quote" />
+      <dmn:output id="_E6AF69CF-6816-4389-9939-DF741D61AF37" name="ROE_Quote_ID" typeRef="string" />
+      <dmn:annotation name="Annotations" />
+      <dmn:rule id="_34517425-3D27-43C9-9510-84D41F843CD4">
+        <dmn:inputEntry id="_841CD968-6B25-4C5B-BB44-1EF1A6FC2DEA">
+          <dmn:text>1</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2B8A3481-056A-4678-826F-31232F22D196">
+          <dmn:text>&quot;loan-corporateMarket&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_587741BF-D1F8-4EA4-8D19-B07C300ED7F6">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_82481808-7AA7-49DF-A671-2B586C0A4745">
+          <dmn:text>DealStart Quote.TPP_QUOTE_ID</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F9F4146C-435C-4B57-B81D-CA3928B4A625">
+          <dmn:text>DealPoint.ROE_QUOTE_ID</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>// Your annotations here</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_32571470-D293-4D36-BC34-5986C37D6273">
+        <dmn:inputEntry id="_2D3AB660-D862-440E-95E8-2DE9C5FF9DD8">
+          <dmn:text>2</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_65540B59-DA88-48E2-871B-8825B93EA396">
+          <dmn:text>&quot;loan-businessMarket&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_EF926B2F-6E32-4CED-8E82-747D7DB81661">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_FF1B1D2D-62F3-40AC-AEF2-6880B93C663B">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5DE279EA-4908-4535-939D-5B430E850FF0">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B6C0EBDB-091F-434B-BBD1-5A261ED0D68D">
+        <dmn:inputEntry id="_18056E7C-2106-4CB9-892A-D8D664897A69">
+          <dmn:text>3</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_447B9720-E267-4706-B24F-F23DD866DB4E">
+          <dmn:text>&quot;loan-marketRate&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_D3630B0F-5F24-44D7-AD14-AD81BF88E2F4">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9C57E8B9-0729-4DED-863D-BB561354CEFD">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_90B9AD97-5B50-4D84-A37E-1DDC6CC2B623">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_FB227589-37E8-4029-94E4-D4FC8A1045B2">
+        <dmn:inputEntry id="_E1504A17-F1C1-48DB-858D-D23C234DF757">
+          <dmn:text>5</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_660A0650-6162-432F-8C03-AA52BA716E5B">
+          <dmn:text>&quot;loan-businessOptions&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_A14BF0B0-3B7E-4B79-8B80-0958C6E99455">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D79BE31D-580D-4BC6-B8D8-D39CAEFD041E">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6C130F79-6EFA-4CB6-A22C-516314DDDC55">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_6DF4AB95-3656-49F2-B009-8E93FF16E377">
+        <dmn:inputEntry id="_D74B9758-5BD6-4E45-B696-B382BCB89845">
+          <dmn:text>8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E112DA28-8F6B-4DCA-8E62-E03DAA94330D">
+          <dmn:text>&quot;loan-overdraft&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_29310511-3D0D-4968-B231-9F6AEF7EF08F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C96AEC3A-1F8A-4528-BA66-89498E773754">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6047EC23-237C-445A-8826-93CC5A9A5644">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_E17F1857-067F-45B5-8E5B-1B108C4B74A4">
+        <dmn:inputEntry id="_EF819911-7FE2-4B19-A0D0-3C4C2D723438">
+          <dmn:text>48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E2EE02BA-5AE8-4117-90C5-F87A68433C6B">
+          <dmn:text>&quot;loan-bankGuarantee&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1D1D8333-54C2-4767-A5F1-F20BBEF1AA0F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B06A5CC2-B212-4463-BA85-D1596B4C4C70">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_53BFF4F2-601B-4A1E-800A-9FE812B4ADF0">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_F05D0824-519F-48A5-9C28-218F5E1A8CB6">
+        <dmn:inputEntry id="_9B3F6760-96BA-471A-8D4B-50DAE817700E">
+          <dmn:text>49</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ED475E37-4143-4CA9-A70F-18FFD2B6DBCA">
+          <dmn:text>&quot;loan-bankGuarantee&quot;</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_358F4362-968E-441E-8AC6-C640A5E7D7B9">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B204D823-CD76-4FAF-B1C2-78FE697BB9F9">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4450EF11-BDA4-41B4-9338-59DA55BCFAA0">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_C719EDDC-6F1B-4723-87F2-9A7CD1E24E24">
+        <dmn:inputEntry id="_59B0A565-5C23-4D4D-BD95-56A2A8E80C8F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2A846358-639A-483D-8276-5AA44D1E6C7C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B97AB8BD-FEC1-4C3A-B0AC-330AD31DA01E">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F2357394-5BD3-4E5E-AE73-3C405D8AF818">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B99351F8-101C-4002-B846-BC7A5D11D69B">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_202D853E-DF93-42E0-9688-5938414B79FD" name="DRG" useAlternativeInputDataShape="false">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_1DFF6A27-F31E-43CB-A054-6FBACA6C36A3">
+            <kie:width>50</kie:width>
+            <kie:width>120</kie:width>
+            <kie:width>793</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5A000685-2186-4EAF-B728-9789FA8E2D32">
+            <kie:width>793</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D55DAC17-D4DA-4201-A874-C65FC5E3E149">
+            <kie:width>793</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9441AA80-58C7-433F-8B80-E285FE711AF8">
+            <kie:width>60</kie:width>
+            <kie:width>244</kie:width>
+            <kie:width>207</kie:width>
+            <kie:width>269</kie:width>
+            <kie:width>397</kie:width>
+            <kie:width>214</kie:width>
+            <kie:width>240</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2AEC95CE-9368-4089-AC2D-3C23A4C2AE38">
+            <kie:width>120</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_E2821FD0-AD1A-4778-B69A-2B90B30349A9" dmnElementRef="_E2821FD0-AD1A-4778-B69A-2B90B30349A9" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255" />
+          <dmndi:StrokeColor red="0" green="0" blue="0" />
+          <dmndi:FontColor red="0" green="0" blue="0" />
+        </dmndi:DMNStyle>
+        <dc:Bounds x="190" y="406" width="100" height="50" />
+        <dmndi:DMNLabel />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_70D95991-78A9-4421-8775-24C75547B728" dmnElementRef="_70D95991-78A9-4421-8775-24C75547B728" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255" />
+          <dmndi:StrokeColor red="0" green="0" blue="0" />
+          <dmndi:FontColor red="0" green="0" blue="0" />
+        </dmndi:DMNStyle>
+        <dc:Bounds x="440" y="400" width="100" height="50" />
+        <dmndi:DMNLabel />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" dmnElementRef="_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255" />
+          <dmndi:StrokeColor red="0" green="0" blue="0" />
+          <dmndi:FontColor red="0" green="0" blue="0" />
+        </dmndi:DMNStyle>
+        <dc:Bounds x="304" y="43" width="100" height="50" />
+        <dmndi:DMNLabel />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_E6C29737-4C5F-421C-B1B2-EDF503F83265" dmnElementRef="_E6C29737-4C5F-421C-B1B2-EDF503F83265">
+        <di:waypoint x="240" y="431" />
+        <di:waypoint x="354" y="68" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_AE00B849-E12A-4367-B8A8-23A95D1D1132" dmnElementRef="_AE00B849-E12A-4367-B8A8-23A95D1D1132">
+        <di:waypoint x="490" y="425" />
+        <di:waypoint x="354" y="68" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
