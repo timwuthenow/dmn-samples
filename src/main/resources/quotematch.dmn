@@ -61,10 +61,10 @@
   <dmn:decision id="_C3753C9A-0A83-4A51-B66E-E9DAA88771DD" name="Quote Match Rule">
     <dmn:extensionElements />
     <dmn:variable id="_18E285C2-56F2-4458-898F-6F69F4BEA696" name="Quote Match Rule" typeRef="Any" />
-    <dmn:informationRequirement id="_E6C29737-4C5F-421C-B1B2-EDF503F83265">
+    <dmn:informationRequirement id="_E7E3DF94-4B34-403E-B4CB-2FAA997ABFE6">
       <dmn:requiredInput href="#_E2821FD0-AD1A-4778-B69A-2B90B30349A9" />
     </dmn:informationRequirement>
-    <dmn:informationRequirement id="_AE00B849-E12A-4367-B8A8-23A95D1D1132">
+    <dmn:informationRequirement id="_E04C055E-9FE7-47CD-AE36-C9515432AACF">
       <dmn:requiredInput href="#_70D95991-78A9-4421-8775-24C75547B728" />
     </dmn:informationRequirement>
     <dmn:decisionTable id="_9441AA80-58C7-433F-8B80-E285FE711AF8" label="Quote Match Rule" typeRef="Any" hitPolicy="UNIQUE">
@@ -300,11 +300,11 @@
         <dc:Bounds x="304" y="43" width="100" height="50" />
         <dmndi:DMNLabel />
       </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-drg-_E6C29737-4C5F-421C-B1B2-EDF503F83265" dmnElementRef="_E6C29737-4C5F-421C-B1B2-EDF503F83265">
+      <dmndi:DMNEdge id="_26E0215E-0E98-4840-856E-D429C675321C" dmnElementRef="_E7E3DF94-4B34-403E-B4CB-2FAA997ABFE6" sourceElement="dmnshape-drg-_E2821FD0-AD1A-4778-B69A-2B90B30349A9" targetElement="dmnshape-drg-_C3753C9A-0A83-4A51-B66E-E9DAA88771DD">
         <di:waypoint x="240" y="431" />
         <di:waypoint x="354" y="68" />
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_AE00B849-E12A-4367-B8A8-23A95D1D1132" dmnElementRef="_AE00B849-E12A-4367-B8A8-23A95D1D1132">
+      <dmndi:DMNEdge id="_CE5556C6-E170-40B4-8379-10D1BF098A47" dmnElementRef="_E04C055E-9FE7-47CD-AE36-C9515432AACF" sourceElement="dmnshape-drg-_70D95991-78A9-4421-8775-24C75547B728" targetElement="dmnshape-drg-_C3753C9A-0A83-4A51-B66E-E9DAA88771DD">
         <di:waypoint x="490" y="425" />
         <di:waypoint x="354" y="68" />
       </dmndi:DMNEdge>
