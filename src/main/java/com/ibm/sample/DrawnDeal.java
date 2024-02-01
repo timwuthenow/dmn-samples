@@ -1,4 +1,8 @@
+package com.ibm.sample;
+import java.math.BigDecimal;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Date;
 
 public class DrawnDeal {
     @JsonProperty("booked deal id")
@@ -12,27 +16,31 @@ public class DrawnDeal {
         @JsonProperty("cust id")
     private String cust_id;
         @JsonProperty("crs")
-    private String crs;
+        private String crs;
         @JsonProperty("anzsic code")
-    private String anzsic_code;
+        private String anzsic_code;
         @JsonProperty("account id")
-    private String account_id;
+        private String account_id;
         @JsonProperty("product type")
-    private String product_type;
+        private String product_type;
         @JsonProperty("product variant")
-    private String product_variant;
+        private String product_variant;
         @JsonProperty("lcc")
-    private String lcc;
+        private String lcc;
         @JsonProperty("fac limit sought")
-    private BigDecimal fac_limit_sought;
+        private BigDecimal fac_limit_sought;
         @JsonProperty("term month")
-    private Integer term_month;
+        private Integer term_month;
         @JsonProperty("Sought tot drawn margin")
-    private BigDecimal sought_tot_drawn_margin;
+        private BigDecimal sought_tot_drawn_margin;
         @JsonProperty("Sought Tot undrawn margin")
-    private BigDecimal sought_tot_undrawn_margin;
+        private BigDecimal sought_tot_undrawn_margin;
         @JsonProperty("Sought Service Fee Per Freq")
-    private BigDecimal sought_service_fee_per_freq;
+        private BigDecimal sought_service_fee_per_freq;
+        @JsonProperty("Account_Mtur_Dt")
+        private Date account_mtur_dt;
+        @JsonProperty("FULL_DATE")
+        private Date full_date;
         
     
     public DrawnDeal() {

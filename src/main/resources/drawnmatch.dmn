@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_39872929-E83B-442F-BC17-2AE762B492F7" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_BBA503B3-B416-4C98-A673-CCEA40F7B594" name="drawnmatch" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_39872929-E83B-442F-BC17-2AE762B492F7">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_D9F5F1F2-616F-4E0E-9029-7C463734CD2C" name="Insert a name" isCollection="false">
+    <dmn:typeRef>Any</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_39E60B72-223A-4048-A171-32A5CB2395A8" name="ConsolidatedQuote" isCollection="false">
+    <dmn:itemComponent id="_802F923D-1FC3-43E1-94DB-95E8984AE089" name="term_month" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_45483A4E-91AE-476E-B4E6-904D30425118" name="sought_tot_undrawn_margin" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_34B79D63-0C8B-427A-836A-5A22F03F0773" name="sought_tot_drawn_margin" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C2E40B90-D733-4701-ADB3-294DA9A44397" name="sought_service_fee_per_freq" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_98D14F61-3C3E-4D71-BF22-58C85384C286" name="rel_number" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D7C40EA9-49BA-47D9-A8A2-35DE4259F10D" name="rel_name" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A96B7B60-9F60-4A38-969F-6E17DA2E1175" name="product_variant" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_33F182CF-723D-42B0-B827-89239CB4B2C5" name="product_type" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_806B6591-2E57-4159-9770-F1B5A7A626C4" name="lcc" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_53950391-A2DE-419A-8BB9-DCB35982269B" name="fac_limit_sought" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3CC12E06-5026-4D5B-BDF8-F0075AF114BC" name="dp_ds_match_id" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_EA924DA8-068B-4DE9-9A90-8C76E41CE391" name="cust_id" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AEF6F98B-DCE7-44D5-BE05-746B006FEC56" name="crs" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0A213976-31AE-483D-9E65-9EAFB287BB42" name="buid" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E45305B9-F7D6-4564-83FA-4177D2943E1B" name="anzsic_code" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_449718CB-79DA-4A61-81BA-1F4E3AB4DAB6" name="account_id" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_0BD06828-4784-478E-B03E-1C51069AC10D" name="DrawnDeal" isCollection="false">
+    <dmn:itemComponent id="_893C4782-439B-489E-A379-BEC9EDC7904D" name="term_month" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_848B2971-70DC-4362-8028-83AB9CA4E628" name="sought_tot_undrawn_margin" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_40E093ED-2309-48B6-8129-AE4F2CF2A7F5" name="sought_tot_drawn_margin" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_10E8D359-3206-4C1B-9C9F-90EF0730C45B" name="sought_service_fee_per_freq" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C7630D3E-C191-44C3-91F5-9F4A2C1613A5" name="rel_number" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_970CDE73-7EA3-4177-8DD9-97DAF810C032" name="rel_name" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F583AD6B-7C1A-4233-AB78-1C5057BC01D7" name="product_variant" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6116BD6C-37BF-43DF-9466-0E447B4D7A79" name="product_type" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0EF8AC0F-D347-4BC6-A956-F259642CC302" name="lcc" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_910FB370-DF91-4CC9-83FC-44F957A59FB3" name="fac_limit_sought" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_917C648B-A397-4BE6-A920-62DBC44558D5" name="cust_id" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0A9056C8-40CC-4C7F-93E3-2D287842B3F7" name="crs" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D1A6FDE8-2761-4EBC-B5B7-60B32C98A740" name="buid" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6FF6F242-B484-4157-B49D-D68BEC673615" name="booked_deal_id" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5A9E3072-CF75-41D3-9085-69EA60ED86F4" name="anzsic_code" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_72739561-0A79-4FDC-9A32-6AB0C7CC8511" name="account_id" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_80F3BC6A-A3D9-4542-B78B-D355AB4ED2AE" name="Drawn Deal">
+    <dmn:extensionElements/>
+    <dmn:variable id="_71C57E79-2C02-4E26-9223-BB0F1AA92002" name="Drawn Deal" typeRef="DrawnDeal"/>
+  </dmn:inputData>
+  <dmn:decision id="_1B8D1BFD-7185-4780-B559-CDA1BBF61858" name="Validate Limits">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9F3F4B4E-D6C0-4D9F-9841-2859B85AC895" name="Validate Limits"/>
+    <dmn:informationRequirement id="_91F778A4-280C-4F7A-9115-ABEA2F179F3B">
+      <dmn:requiredInput href="#_80F3BC6A-A3D9-4542-B78B-D355AB4ED2AE"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_C2A2B100-6F77-4EF9-A871-5690015178A9">
+      <dmn:requiredInput href="#_E4569BA3-51CC-44A3-B93F-FF8050BE1EBB"/>
+    </dmn:informationRequirement>
+  </dmn:decision>
+  <dmn:inputData id="_E4569BA3-51CC-44A3-B93F-FF8050BE1EBB" name="Consolidated Deal">
+    <dmn:extensionElements/>
+    <dmn:variable id="_AE372D93-97D1-438B-A0A7-19C57E513CA5" name="Consolidated Deal" typeRef="ConsolidatedQuote"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_479E50F9-AC0E-4037-A56C-BB962887A52A" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension/>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_80F3BC6A-A3D9-4542-B78B-D355AB4ED2AE" dmnElementRef="_80F3BC6A-A3D9-4542-B78B-D355AB4ED2AE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="281" y="509" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_1B8D1BFD-7185-4780-B559-CDA1BBF61858" dmnElementRef="_1B8D1BFD-7185-4780-B559-CDA1BBF61858" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="408" y="371" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_E4569BA3-51CC-44A3-B93F-FF8050BE1EBB" dmnElementRef="_E4569BA3-51CC-44A3-B93F-FF8050BE1EBB" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="551" y="514" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_91F778A4-280C-4F7A-9115-ABEA2F179F3B-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_91F778A4-280C-4F7A-9115-ABEA2F179F3B">
+        <di:waypoint x="331" y="509"/>
+        <di:waypoint x="458" y="421"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_C2A2B100-6F77-4EF9-A871-5690015178A9" dmnElementRef="_C2A2B100-6F77-4EF9-A871-5690015178A9">
+        <di:waypoint x="601" y="539"/>
+        <di:waypoint x="458" y="396"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
